@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>_02._Числата_от_N_до_1_в_обратен_ред</RootNamespace>
+  </PropertyGroup>
+
+</Project>
