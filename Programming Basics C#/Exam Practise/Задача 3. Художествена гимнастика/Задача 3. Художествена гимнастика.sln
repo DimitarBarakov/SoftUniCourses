@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Задача 3. Художествена гимнастика", "Задача 3. Художествена гимнастика\Задача 3. Художествена гимнастика.csproj", "{EFB14769-B1BE-4938-9105-17CC6BC037E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFB14769-B1BE-4938-9105-17CC6BC037E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFB14769-B1BE-4938-9105-17CC6BC037E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFB14769-B1BE-4938-9105-17CC6BC037E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFB14769-B1BE-4938-9105-17CC6BC037E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C1FF277B-AA49-4CA2-B5B7-19A42CCAD6E7}
+	EndGlobalSection
+EndGlobal
