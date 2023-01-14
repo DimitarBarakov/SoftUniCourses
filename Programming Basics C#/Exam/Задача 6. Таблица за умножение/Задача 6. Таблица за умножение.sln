@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Задача 6. Таблица за умножение", "Задача 6. Таблица за умножение\Задача 6. Таблица за умножение.csproj", "{6059FAEB-E041-41BF-8462-83A867939D67}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6059FAEB-E041-41BF-8462-83A867939D67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6059FAEB-E041-41BF-8462-83A867939D67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6059FAEB-E041-41BF-8462-83A867939D67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6059FAEB-E041-41BF-8462-83A867939D67}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DC712AB4-F785-4D28-98F9-DD69892079F1}
+	EndGlobalSection
+EndGlobal
