@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13. Holidays Between Two Dates", "13. Holidays Between Two Dates\13. Holidays Between Two Dates.csproj", "{9B19D77B-97A5-4B0B-B562-8B16D4303AF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B19D77B-97A5-4B0B-B562-8B16D4303AF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B19D77B-97A5-4B0B-B562-8B16D4303AF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B19D77B-97A5-4B0B-B562-8B16D4303AF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B19D77B-97A5-4B0B-B562-8B16D4303AF5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF05D7C0-DCAF-40B1-8DA4-F072CC856C51}
+	EndGlobalSection
+EndGlobal
