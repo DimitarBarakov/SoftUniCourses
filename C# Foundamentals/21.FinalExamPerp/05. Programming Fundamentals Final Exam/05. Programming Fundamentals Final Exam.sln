@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Programming Fundamentals Final Exam", "05. Programming Fundamentals Final Exam\05. Programming Fundamentals Final Exam.csproj", "{F53002EF-6617-4187-9DED-65F42828971A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 1 - Activation Keys", "Problem 1 - Activation Keys\Problem 1 - Activation Keys.csproj", "{4C150FF3-A8FC-4C21-8ED7-7CD7485981EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 2 - Emoji Detector", "Problem 2 - Emoji Detector\Problem 2 - Emoji Detector.csproj", "{B2FA7A28-5DAD-4E8B-A038-952FC1711F78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 3 - P!rates", "Problem 3 - P!rates\Problem 3 - P!rates.csproj", "{C7DF053F-129B-4FBB-B98E-BC9034925780}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F53002EF-6617-4187-9DED-65F42828971A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F53002EF-6617-4187-9DED-65F42828971A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F53002EF-6617-4187-9DED-65F42828971A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F53002EF-6617-4187-9DED-65F42828971A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C150FF3-A8FC-4C21-8ED7-7CD7485981EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C150FF3-A8FC-4C21-8ED7-7CD7485981EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C150FF3-A8FC-4C21-8ED7-7CD7485981EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C150FF3-A8FC-4C21-8ED7-7CD7485981EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2FA7A28-5DAD-4E8B-A038-952FC1711F78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2FA7A28-5DAD-4E8B-A038-952FC1711F78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2FA7A28-5DAD-4E8B-A038-952FC1711F78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2FA7A28-5DAD-4E8B-A038-952FC1711F78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7DF053F-129B-4FBB-B98E-BC9034925780}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7DF053F-129B-4FBB-B98E-BC9034925780}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7DF053F-129B-4FBB-B98E-BC9034925780}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7DF053F-129B-4FBB-B98E-BC9034925780}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7036F09D-2CB2-413B-A068-2294D506ECE8}
+	EndGlobalSection
+EndGlobal
