@@ -1,0 +1,99 @@
+for (int row = 0; row < n; row++)
+            {
+                for (int col = 0; col < n; col++)
+                {
+                    if (matrix[row,col] == 'K')
+                    {
+                        //one vertically down
+                        if (row + 1 < matrix.GetLength(0))
+                        {
+                            if (col + 2 < matrix.GetLength(1))
+                            {
+                                if (matrix[row + 1, col + 2] == 'K')
+                                {
+                                    counter++;
+                                    matrix[row, col] = '0';
+                                    continue;
+                                }
+                            }
+                            if (col - 2 >= 0)
+                            {
+                                if (matrix[row + 1, col - 2] == 'K')
+                                {
+                                    counter++;
+                                    matrix[row, col] = '0';
+                                    continue;
+                                }
+                            }
+                        }
+                        //one vertically up
+                        if (row - 1 >= 0)
+                        {
+                            if (col + 2 < matrix.GetLength(1))
+                            {
+                                if (matrix[row - 1, col + 2] == 'K')
+                                {
+                                    counter++;
+                                    matrix[row, col] = '0';
+                                    continue;
+                                }
+                            }
+                            if (col - 2 >= 0)
+                            {
+                                if (matrix[row - 1, col - 2] == 'K')
+                                {
+                                    counter++;
+                                    matrix[row, col] = '0';
+                                    continue;
+                                }
+                            }
+                        }
+                        //two vertically down
+                        if (row + 2 < matrix.GetLength(0))
+                        {
+                            if (col + 1 < matrix.GetLength(1))
+                            {
+                                if (matrix[row + 2, col + 1] == 'K')
+                                {
+                                    matrix[row, col] = '0';
+                                    counter++;
+                                    continue;
+                                }
+                            }
+                            if (col - 1 >= 0)
+                            {
+                                if (matrix[row + 2, col - 1] == 'K')
+                                {
+                                    matrix[row, col] = '0';
+                                    counter++;
+                                    continue;
+                                }
+                            }
+                        }
+                        // two vertically up
+                        if (row - 2 >= 0)
+                        {
+                            if (col + 1 < matrix.GetLength(1))
+                            {
+                                if (matrix[row - 2, col + 1] == 'K')
+                                {
+                                    matrix[row, col] = '0';
+                                    counter++;
+                                    continue;
+                                }
+                            }
+                            if (col - 1 >= 0)
+                            {
+                                if (matrix[row - 2, col - 1] == 'K')
+                                {
+                                    matrix[row, col] = '0';
+                                    counter++;
+                                    continue;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            Console.WriteLine(counter);
