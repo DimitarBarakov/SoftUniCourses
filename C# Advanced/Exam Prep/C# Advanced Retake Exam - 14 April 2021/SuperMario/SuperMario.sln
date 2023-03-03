@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperMario", "SuperMario\SuperMario.csproj", "{21E45B18-7D3E-4191-95B5-0858A2ACEB1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecondTry", "SecondTry\SecondTry.csproj", "{BE8E8275-AE45-4DBE-B40F-EF5C5C719948}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Online", "Online\Online.csproj", "{9B804698-9D99-4708-B55F-2CAB7516FB1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21E45B18-7D3E-4191-95B5-0858A2ACEB1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21E45B18-7D3E-4191-95B5-0858A2ACEB1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21E45B18-7D3E-4191-95B5-0858A2ACEB1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21E45B18-7D3E-4191-95B5-0858A2ACEB1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE8E8275-AE45-4DBE-B40F-EF5C5C719948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE8E8275-AE45-4DBE-B40F-EF5C5C719948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE8E8275-AE45-4DBE-B40F-EF5C5C719948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE8E8275-AE45-4DBE-B40F-EF5C5C719948}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B804698-9D99-4708-B55F-2CAB7516FB1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B804698-9D99-4708-B55F-2CAB7516FB1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B804698-9D99-4708-B55F-2CAB7516FB1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B804698-9D99-4708-B55F-2CAB7516FB1D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E6BEB91-46A6-4021-A5C9-B89D9756C8B7}
+	EndGlobalSection
+EndGlobal
