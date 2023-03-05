@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>_02._Multiple_Inheritance</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="D:\WORKSPACE\SoftUni\OOP\Inheritance\03.Hierarchical Inheritance.cs" Link="03.Hierarchical Inheritance.cs" />
+  </ItemGroup>
+
+</Project>
