@@ -1,0 +1,29 @@
+body{
+    font-family: "Open Sans", sans-serif;
+    padding: 3rem 12rem;
+}
+header article{
+    display: inline-block;
+    height: 85px;
+    margin-bottom: 20px;
+}
+header article:nth-child(1){
+    width: 70%;
+    border-left: 2px solid darkgray;
+    padding-left: 20px;
+}
+header article:nth-child(2){
+    border-left: 2px solid darkgray;
+    padding-left: 20px;
+}
+main article:nth-child(1){
+    width: 34%;
+}
+main article{
+    display: inline-block;
+    padding: 5px;
+    vertical-align: top;
+}
+main article:nth-child(2){
+    width: 31%;
+}

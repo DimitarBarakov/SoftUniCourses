@@ -1,0 +1,10 @@
+nav ul li a{
+    text-decoration: none;
+    color: orange;
+}
+nav ul li{
+    display: inline;
+}
+nav{
+    text-align:  right;
+}

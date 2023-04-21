@@ -1,0 +1,80 @@
+body{
+    font-family: "Open Sans", sans-serif;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 200px
+}
+nav{
+    text-align: center;
+}
+nav ul li{
+    display: inline-block;
+
+}
+nav ul{
+    margin: 0px;
+    padding: 10px 0px;
+}
+nav ul li a{
+    color: rgb(214,116,114);
+    text-decoration: none;
+    padding:15px;
+    font-weight: bold;
+    font-size: 15px;
+}
+main section{
+    text-align: center;
+}
+main section:nth-child(1){
+    background: grey;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url("https://scontent.xx.fbcdn.net/v/t1.15752-9/264069972_289198886476073_157505776286410010_n.png?stp=dst-png_p206x206&_nc_cat=102&ccb=1-7&_nc_sid=aee45a&_nc_ohc=SqoDJtyjkpEAX8LMHlb&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVIhIpsO-HUMTgskwzZlhqYMNji52mBlKJ8laPVwkpfKMg&oe=635984D1");
+    padding: 150px 237px;
+    background-size: 100% 100%;
+    color: white;
+}
+main section:nth-child(2){
+    padding: 50px 237px;
+    background: rgb(214,116,114);
+    color: white;
+    padding-bottom: 27px;
+}
+button{
+    border: solid 2px rgb(214,116,114);
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 12px;
+    background: white;
+    color: rgb(214,116,114);
+}
+hr{
+    width: 60px;
+    border: 2px solid rgb(214,116,114);
+}
+button:hover{
+    border: 2px solid white;
+    background-color: rgb(214,116,114);
+    color: white;
+    cursor: pointer;
+}
+main section:nth-child(2) hr{
+    width: 60px;
+    border: 2px solid white;
+}
+main section:nth-child(2) article{
+    padding-bottom: 36px;
+}
+main section:nth-child(3) article{
+    display: inline-block;
+    width: 30%;
+}
+main section:nth-child(3) article img{
+    width: 100px;
+}
+footer{
+    background: rgb(214,116,114);
+    color: white;
+    text-align: center;
+}
+footer p{
+    margin: 0px;
+    padding: 10px;
+}
