@@ -1,0 +1,97 @@
+body{
+    font-family: "PT Sans", sans-serif;
+    padding: 10px 20px 0px 20px
+}
+nav ul {
+    text-align: right;
+}
+nav ul li{
+    display: inline-block;
+    padding: 0px 10px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+nav ul li a:hover{
+    text-decoration: none;
+    color: #50b9e1;
+}
+header span{
+    color: #50b9e1;
+}
+header p{
+    float: left;
+    margin: 0px;
+    font-size: 20px;
+}
+main section:nth-child(1){
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) ,  url("https://scontent.xx.fbcdn.net/v/t1.15752-9/259702271_481729866726664_8919762206997779625_n.jpg?stp=dst-jpg_p206x206&_nc_cat=104&ccb=1-7&_nc_sid=aee45a&_nc_ohc=3JIFeubg4D0AX99I9TS&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVJIrjHQrJex9q-dcMkTIXjoj3TCkEbsESpbW4ZOyx14Gg&oe=6359C880");
+    background-size: 100% 100%;
+    padding: 200px 100px;
+}
+main section:nth-child(1) button{
+    border: 2px solid white;
+    background: transparent;
+    font-size: 26px;
+    color: white;
+}
+main section:nth-child(1) button:hover{
+    background: #50b9e1;
+    border: 2px solid #50b9e1;
+    cursor: pointer;
+}
+main section:nth-child(1) h1{
+    font-size: 66px;
+    color: white;
+}
+main section:nth-child(2){
+    width: 60%;
+    text-align: center;
+    color: #5a7c8a;
+    padding: 0 20% 0 20%
+}
+main section:nth-child(2) a{
+    text-decoration: none;
+    color: #50b9e1;
+}
+main section:nth-child(3) article{
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    padding:0px 50px;
+}
+main section:nth-child(3) h2{
+    text-align: center;
+    color: white;
+    font-family: "PT Serif";
+    font-size: 32px;
+    font-style: italic;
+    letter-spacing: 2px;
+
+}
+main section:nth-child(3) article img{
+    width: 65px;
+}
+main section:nth-child(3){
+    background: #50b9e1;
+    color: white;
+    font-family: "PT Serif", Serif;
+    padding: 40px 20px;
+}
+main section:nth-child(4) h2{
+    color: #5a7c8a;
+    font-family: "PT Serif", Serif;
+    text-align: center;
+}
+main section:nth-child(4)>p{
+    color: #5a7c8a;
+    font-family: "PT Serif", Serif;
+    text-align: center;
+    padding: 0px 335px;
+}
+main section:nth-child(4) article{
+    width: 3 0%;
+    display: inline-block;
+}
+
