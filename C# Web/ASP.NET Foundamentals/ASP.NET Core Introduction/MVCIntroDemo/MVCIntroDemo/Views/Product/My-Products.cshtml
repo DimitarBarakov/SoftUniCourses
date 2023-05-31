@@ -1,0 +1,11 @@
+﻿@using MVCIntroDemo.Models.Product;
+@model IEnumerable<ProductViewModel>
+
+<ul class="list-group list-group-flush">
+    @{
+        foreach (var item in Model)
+        {
+            <li class="list-group-item">N.@item.Id: @item.Name - @item.Price</li>
+        }
+    }
+</ul>
