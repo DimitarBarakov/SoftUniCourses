@@ -18,8 +18,8 @@
             public const int DescriptionMaxLength = 500;
             public const int DescriptionMinLength = 50;
 
-            public const decimal PriceMax = 2000;
-            public const decimal PriceMin = 0;
+            public const double PriceMax = 2000;
+            public const double PriceMin = 0;
 
             public const int ImageUrlMaxLength = 2048;
         }
