@@ -1,6 +1,8 @@
-﻿using HouseRentingSystem.Services.Data.Interfaces;
+﻿using HouseRentingSystem.Data.Models;
+using HouseRentingSystem.Services.Data.Interfaces;
 using HouseRentingSystem.Web.Data;
 using HouseRentingSystem.Web.ViewModels.Home;
+using HouseRentingSystem.Web.ViewModels.House;
 using Microsoft.EntityFrameworkCore;
 
 namespace HouseRentingSystem.Services.Data
@@ -13,6 +15,23 @@ namespace HouseRentingSystem.Services.Data
         {
             dbContext = context;
         }
+
+        public async Task AddAsync(AddHouseViewModel model, string agentId)
+        {
+            House houseToAdd = new House()
+            {
+                Title = model.Title,
+                Address = model.Address,
+                Description = model.Description,
+                ImageUrl = model.ImageUrl,
+                PricePerMonth = model.PricePerMonth,
+                CategoryId = model.CategoryId,
+                AgentId = Guid.Parse(agentId)
+            };
+            await dbContext.Houses.AddAsync(houseToAdd);
+            await dbContext.SaveChangesAsync();
+        }
+
         public async Task<IEnumerable<IndexViewModel>> LastThreeHousesAsync()
         {
             List<IndexViewModel> lastThreeHouses = await dbContext.Houses
