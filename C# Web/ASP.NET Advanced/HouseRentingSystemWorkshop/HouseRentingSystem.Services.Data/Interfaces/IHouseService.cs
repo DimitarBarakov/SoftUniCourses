@@ -1,4 +1,5 @@
-﻿using HouseRentingSystem.Web.ViewModels.Home;
+﻿using HouseRentingSystem.Services.Models;
+using HouseRentingSystem.Web.ViewModels.Home;
 using HouseRentingSystem.Web.ViewModels.House;
 using System;
 using System.Collections.Generic;
@@ -13,5 +14,10 @@ namespace HouseRentingSystem.Services.Data.Interfaces
         Task<IEnumerable<IndexViewModel>> LastThreeHousesAsync();
 
         Task AddAsync(AddHouseViewModel model, string agentId);
+
+        Task<AllHousesFilteredAndPagedServiceModel> AllAsync(AllHousesQueryModel model);
+
+        Task<List<AllHouseViewModel>> AllHousesByAgentIdAsync(string agentId);
+        Task<List<AllHouseViewModel>> AllHousesByUserIdAsync(string userId);
     }
 }

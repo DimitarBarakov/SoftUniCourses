@@ -9,6 +9,7 @@ namespace HouseRentingSystem.Data.Models
         public House()
         {
             this.Id = Guid.NewGuid();
+            this.CreatedOn = DateTime.Now;
         }
         [Key]
         public Guid Id { get; set; }

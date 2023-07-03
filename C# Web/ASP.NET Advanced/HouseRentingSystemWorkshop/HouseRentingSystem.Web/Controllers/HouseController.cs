@@ -1,4 +1,6 @@
-﻿using HouseRentingSystem.Services.Data.Interfaces;
+﻿using HouseRentingSystem.Data.Models;
+using HouseRentingSystem.Services.Data.Interfaces;
+using HouseRentingSystem.Services.Models;
 using HouseRentingSystem.Web.ViewModels.House;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -18,11 +20,17 @@ namespace HouseRentingSystem.Web.Controllers
             this.agentService = agentService;
             this.houseService = houseService;
         }
-
+        
         [AllowAnonymous]
-        public async Task<IActionResult> All()
+        public async Task<IActionResult> All([FromQuery]AllHousesQueryModel queryModel)
         {
-            return this.Ok();
+            AllHousesFilteredAndPagedServiceModel model = await houseService.AllAsync(queryModel);
+
+            queryModel.Houses = model.Houses;
+            queryModel.TotalHouses = model.TotalHousesCount;
+            queryModel.Categories = await categoryService.AllCategoryNamesASync();
+
+            return View(queryModel);
         }
 
         [HttpGet]
@@ -77,6 +85,25 @@ namespace HouseRentingSystem.Web.Controllers
             }
 
             return RedirectToAction("All");
+        }
+
+        public async Task<IActionResult> Mine()
+        {
+            List<AllHouseViewModel> houses;
+
+            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (await agentService.AgentExistsByUserId(userId))
+            {
+                string? agentId = await agentService.GetAgentIdByUserId(userId);
+
+                houses = await houseService.AllHousesByAgentIdAsync(agentId!);
+            }
+            else
+            {
+                houses = await houseService.AllHousesByUserIdAsync(userId);
+            }
+
+            return View(houses);
         }
     }
 }

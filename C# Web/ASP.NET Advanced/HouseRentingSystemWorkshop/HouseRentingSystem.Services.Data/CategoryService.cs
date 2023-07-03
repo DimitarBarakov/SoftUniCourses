@@ -32,6 +32,13 @@ namespace HouseRentingSystem.Services.Data
             return categories;
         }
 
+        public async Task<List<string>> AllCategoryNamesASync()
+        {
+            List<string> categoryNames = await dbContext.Categories.Select(c => c.Name).ToListAsync();
+
+            return categoryNames;
+        }
+
         public async Task<bool> ExistById(Guid id)
         {
             bool result = await dbContext.Categories

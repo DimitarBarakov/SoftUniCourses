@@ -6,5 +6,7 @@ namespace HouseRentingSystem.Services.Data.Interfaces
     {
         Task<List<CategoryViewModel>> AllCategoriesAsync();
         Task<bool> ExistById(Guid id);
+
+        Task<List<string>> AllCategoryNamesASync();
     }
 }
