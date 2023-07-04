@@ -63,7 +63,7 @@ namespace HouseRentingSystem.Web.Controllers
             bool doesCategoryExists = await categoryService.ExistById(model.CategoryId);
             if (!doesCategoryExists) 
             {
-                ModelState.AddModelError(nameof(model.CategoryId), "Select category does not exists");
+                ModelState.AddModelError(nameof(model.CategoryId), "Selected category does not exists");
             }
             if (!ModelState.IsValid)
             {
@@ -104,6 +104,86 @@ namespace HouseRentingSystem.Web.Controllers
             }
 
             return View(houses);
+        }
+
+        [AllowAnonymous]
+        public async Task<IActionResult> Details(string id)
+        {
+            var model = await houseService.ShowHouseDetails(id);
+
+            return View(model);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(string id)
+        {
+            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (!await agentService.AgentExistsByUserId(userId))
+            {
+                return RedirectToAction("Become", "Agent");
+            }
+            House house = await houseService.GetHouseById(id);
+
+            var model = new AddHouseViewModel()
+            {
+                Title = house.Title,
+                Address = house.Address,
+                Description = house.Description,
+                ImageUrl = house.ImageUrl,
+                PricePerMonth = house.PricePerMonth,
+                CategoryId = house.CategoryId,
+                Categories = await categoryService.AllCategoriesAsync()
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(AddHouseViewModel model, string id)
+        {
+            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (!ModelState.IsValid)
+            {
+                model.Categories = await categoryService.AllCategoriesAsync();
+
+                return View(model);
+            }
+
+            string? agentId = await agentService.GetAgentIdByUserId(userId);
+
+            bool isAgentOwner = await houseService.IsAgentWithIdOwnerToHouseWithId(agentId!, id);
+            if (!isAgentOwner)
+            {
+                return RedirectToAction("Mine");
+            }
+
+            await houseService.EditHouse(model, agentId!, id);
+            return RedirectToAction("Details", new {id});
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(string id)
+        {
+            House house = await houseService.GetHouseById(id);
+
+            var model = new DeleteHouseViewModel()
+            {
+                Id = house.Id.ToString(),
+                Title = house.Title,
+                Address = house.Address,
+                ImageUrl = house.ImageUrl
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(DeleteHouseViewModel model)
+        {
+            await houseService.Delete(model.Id);
+
+            return RedirectToAction("Mine");
         }
     }
 }

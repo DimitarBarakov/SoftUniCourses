@@ -1,4 +1,5 @@
-﻿using HouseRentingSystem.Services.Models;
+﻿using HouseRentingSystem.Data.Models;
+using HouseRentingSystem.Services.Models;
 using HouseRentingSystem.Web.ViewModels.Home;
 using HouseRentingSystem.Web.ViewModels.House;
 using System;
@@ -19,5 +20,15 @@ namespace HouseRentingSystem.Services.Data.Interfaces
 
         Task<List<AllHouseViewModel>> AllHousesByAgentIdAsync(string agentId);
         Task<List<AllHouseViewModel>> AllHousesByUserIdAsync(string userId);
+
+        Task<DetailsHouseViewModel> ShowHouseDetails(string houseId);
+
+        Task<House> GetHouseById(string houseId);
+
+        Task EditHouse(AddHouseViewModel model, string agentId, string houseId);
+
+        Task<bool> IsAgentWithIdOwnerToHouseWithId(string agentId, string houseId);
+
+        Task Delete(string id);
     }
 }
