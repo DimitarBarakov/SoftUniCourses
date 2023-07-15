@@ -30,5 +30,13 @@ namespace HouseRentingSystem.Services.Data.Interfaces
         Task<bool> IsAgentWithIdOwnerToHouseWithId(string agentId, string houseId);
 
         Task Delete(string id);
+
+        Task<bool> IsRented(string houseId);
+
+        Task RentHouse(string houseId, string userId);
+
+        Task<bool> IsHouseRentedByUserWithId(string houseId, string userId);
+
+        Task LeaveHouse(string houseId);
     }
 }

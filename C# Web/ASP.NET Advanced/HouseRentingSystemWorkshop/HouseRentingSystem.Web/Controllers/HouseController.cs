@@ -16,7 +16,7 @@ namespace HouseRentingSystem.Web.Controllers
         private readonly IHouseService houseService;
         public HouseController(ICategoryService service, IAgentService agentService, IHouseService houseService)
         {
-            categoryService = service;
+            this.categoryService = service;
             this.agentService = agentService;
             this.houseService = houseService;
         }
@@ -183,6 +183,62 @@ namespace HouseRentingSystem.Web.Controllers
         {
             await houseService.Delete(model.Id);
 
+            return RedirectToAction("Mine");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Rent(string id)
+        {
+            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var house = await houseService.GetHouseById(id);
+
+            if (house == null)
+            {
+                return RedirectToAction("All");
+            }
+            if (await houseService.IsRented(id))
+            {
+                return BadRequest();
+            }
+            if (await agentService.AgentExistsByUserId(userId))
+            {
+                return BadRequest();
+            }
+            try
+            {
+                await houseService.RentHouse(id, userId);
+            }
+            catch(Exception)
+            {
+                return RedirectToAction("all");
+            }
+            return RedirectToAction("Mine");
+        }
+        [HttpPost]
+        public async Task<IActionResult> Leave(string id)
+        {
+            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var house = await houseService.GetHouseById(id);
+
+            if (house == null)
+            {
+                return BadRequest("House does not exist");
+            }
+            if (!await houseService.IsRented(id))
+            {
+                return BadRequest("House is not rented");
+            }
+            if (await agentService.AgentExistsByUserId(userId))
+            {
+                return BadRequest("You should be renter");
+            }
+
+            if (!await this.houseService.IsHouseRentedByUserWithId(id, userId))
+            {
+                return BadRequest("You should be the renter of hte house");
+            }
+
+            await houseService.LeaveHouse(id);
             return RedirectToAction("Mine");
         }
     }
