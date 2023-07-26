@@ -33,8 +33,11 @@ namespace HouseRentingSystem.Web
                 options.Password.RequireUppercase = builder.Configuration.GetValue<bool>("Identity:Password:RequireUppercase");
                 options.Password.RequireNonAlphanumeric = builder.Configuration.GetValue<bool>("Identity:Password:RequireNonAlphanumeric");
             })
+                .AddRoles<IdentityRole<Guid>>()
                 .AddEntityFrameworkStores<HouseRentingSystemDbContext>();
+
             builder.Services.AddControllersWithViews();
+
             builder.Services.AddControllersWithViews()
                 .AddMvcOptions(options =>
                 {
